@@ -1,0 +1,45 @@
+# --- Data (raw data should not be committed) ---
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# --- R ---
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+renv/library/
+renv/local/
+renv/cellar/
+renv/lock/
+renv/python/
+renv/staging/
+*.Rproj
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.ipynb_checkpoints/
+.pytest_cache/
+
+# --- TensorFlow / model artifacts ---
+results/models/*.h5
+results/models/*.keras
+results/models/checkpoints/
+*.tfrecord
+logs/
+wandb/
+mlruns/
+
+# --- OS / editor ---
+.DS_Store
+.vscode/
+.idea/
+
+# --- Env / secrets ---
+.env
+.Renviron
