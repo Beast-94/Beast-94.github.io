@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adrian Mating'i Kimani — Plant Breeder & Quantitative Geneticist</title>
+<meta name="description" content="Plant breeder and quantitative geneticist working across genomic selection, machine learning, and field trial genetics in East Africa.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#13221B;
+    --surface:#1B2E23;
+    --surface-2:#20362A;
+    --gold:#D4A83A;
+    --blue:#6FA3AE;
+    --text:#F1EFE6;
+    --text-muted:#96A897;
+    --rule:rgba(241,239,230,0.12);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important;}
+  }
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'IBM Plex Sans', sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:920px; margin:0 auto; padding:0 28px;}
+  .mono{font-family:'IBM Plex Mono', monospace;}
+  a{color:var(--blue);}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--gold); outline-offset:3px;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    padding:96px 0 72px;
+    overflow:hidden;
+    border-bottom:1px solid var(--rule);
+  }
+  .plot-field{
+    position:absolute; inset:0;
+    display:grid;
+    grid-template-columns:repeat(14, 1fr);
+    grid-template-rows:repeat(6, 1fr);
+    gap:6px;
+    padding:20px;
+    opacity:0.55;
+    z-index:0;
+  }
+  .plot-field div{
+    background:var(--surface);
+    border:1px solid rgba(241,239,230,0.05);
+    border-radius:2px;
+  }
+  .plot-field div.on{
+    background:rgba(212,168,58,0.28);
+    border-color:rgba(212,168,58,0.5);
+    animation:plotIn 900ms ease both;
+  }
+  @keyframes plotIn{
+    from{opacity:0; transform:scale(0.6);}
+    to{opacity:1; transform:scale(1);}
+  }
+  .hero-inner{position:relative; z-index:1;}
+  .eyebrow{
+    color:var(--gold);
+    letter-spacing:0.12em;
+    font-size:0.72rem;
+    text-transform:uppercase;
+  }
+  h1{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    font-size:clamp(2.4rem, 6vw, 3.6rem);
+    line-height:1.05;
+    margin:18px 0 16px;
+    max-width:12ch;
+  }
+  .hero-sub{
+    color:var(--text-muted);
+    max-width:52ch;
+    font-size:1.05rem;
+  }
+  .hero-meta{
+    margin-top:32px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px 22px;
+    font-size:0.85rem;
+    color:var(--text-muted);
+  }
+  .hero-meta a{color:var(--text-muted); text-decoration:none; border-bottom:1px solid var(--rule);}
+  .hero-meta a:hover{color:var(--gold); border-color:var(--gold);}
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:64px 0; border-bottom:1px solid var(--rule);}
+  .section-head{
+    display:flex; align-items:baseline; gap:14px;
+    margin-bottom:32px;
+  }
+  .plot-code{
+    color:var(--gold);
+    font-size:0.78rem;
+    letter-spacing:0.05em;
+    white-space:nowrap;
+  }
+  h2{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    font-size:1.5rem;
+  }
+  p{color:var(--text-muted); max-width:65ch;}
+  .lede{color:var(--text); font-size:1.05rem; max-width:62ch;}
+
+  /* ---------- EXPERIENCE ---------- */
+  .timeline{border-left:1px solid var(--rule); margin-left:4px;}
+  .role{padding:0 0 28px 24px; position:relative;}
+  .role:last-child{padding-bottom:0;}
+  .role::before{
+    content:''; position:absolute; left:-5px; top:6px;
+    width:9px; height:9px; border-radius:2px;
+    background:var(--gold);
+  }
+  .role-head{display:flex; flex-wrap:wrap; gap:8px 14px; align-items:baseline; margin-bottom:6px;}
+  .role-title{font-weight:600; font-size:1.02rem;}
+  .role-date{color:var(--gold); font-size:0.78rem;}
+  .role p{font-size:0.95rem;}
+
+  /* ---------- SKILLS ---------- */
+  .block-group{margin-bottom:30px;}
+  .block-label{
+    font-size:0.78rem; color:var(--gold); letter-spacing:0.05em; margin-bottom:12px; display:block;
+  }
+  .chips{display:flex; flex-wrap:wrap; gap:8px;}
+  .chip{
+    background:var(--surface);
+    border:1px solid var(--rule);
+    border-radius:3px;
+    padding:7px 12px;
+    font-size:0.85rem;
+    transition:transform 160ms ease, border-color 160ms ease, background 160ms ease;
+  }
+  .chip:hover{
+    border-color:var(--gold);
+    background:var(--surface-2);
+    transform:translateY(-2px);
+  }
+  .chip .id{color:var(--gold); font-size:0.7rem; margin-right:6px;}
+
+  /* ---------- PUBLICATIONS ---------- */
+  .pub{
+    background:var(--surface);
+    border:1px solid var(--rule);
+    border-radius:4px;
+    padding:20px 22px;
+    margin-bottom:14px;
+  }
+  .pub-tag{
+    display:inline-block;
+    font-size:0.68rem;
+    letter-spacing:0.05em;
+    color:var(--bg);
+    background:var(--gold);
+    padding:2px 8px;
+    border-radius:2px;
+    margin-bottom:10px;
+    text-transform:uppercase;
+  }
+  .pub-tag.inprep{background:transparent; color:var(--gold); border:1px solid var(--gold);}
+  .pub h3{font-family:'Fraunces', serif; font-weight:500; font-size:1.05rem; margin-bottom:6px; color:var(--text);}
+  .pub p{font-size:0.92rem; margin-bottom:8px;}
+  .pub a{font-size:0.85rem; text-decoration:none; border-bottom:1px solid currentColor;}
+
+  /* ---------- PROJECTS ---------- */
+  .projects{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+  @media (max-width:640px){.projects{grid-template-columns:1fr;}}
+  .card{
+    background:var(--surface);
+    border:1px solid var(--rule);
+    border-radius:4px;
+    padding:22px;
+    display:flex; flex-direction:column; gap:10px;
+    transition:border-color 160ms ease, transform 160ms ease;
+  }
+  .card:hover{border-color:var(--gold); transform:translateY(-3px);}
+  .card h3{font-size:1rem; font-weight:600; color:var(--text);}
+  .card p{font-size:0.88rem; margin:0;}
+  .card .stack{font-size:0.72rem; color:var(--gold); letter-spacing:0.03em;}
+  .card a.go{font-size:0.85rem; color:var(--blue); text-decoration:none; margin-top:auto;}
+  .card a.go:hover{color:var(--gold);}
+
+  /* ---------- CONTACT / FOOTER ---------- */
+  footer{padding:56px 0 64px;}
+  .contact-grid{display:flex; flex-wrap:wrap; gap:28px; margin-top:26px;}
+  .contact-item{font-size:0.92rem;}
+  .contact-item span{display:block; color:var(--gold); font-size:0.72rem; letter-spacing:0.05em; margin-bottom:4px;}
+  .contact-item a{color:var(--text); text-decoration:none; border-bottom:1px solid var(--rule);}
+  .contact-item a:hover{color:var(--gold); border-color:var(--gold);}
+  .aside{margin-top:40px; padding-top:24px; border-top:1px solid var(--rule); font-size:0.85rem; color:var(--text-muted);}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="plot-field" id="plotField" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <p class="eyebrow mono">Nairobi, Kenya</p>
+    <h1>Adrian Mating'i Kimani</h1>
+    <p class="hero-sub">Plant breeder and quantitative geneticist working across genomic selection, machine learning, and field trial genetics — currently on the Forages team at the Alliance of Bioversity International &amp; CIAT.</p>
+    <div class="hero-meta mono">
+      <a href="mailto:kimaniadrian@gmail.com">kimaniadrian@gmail.com</a>
+      <a href="https://github.com/Beast-94" target="_blank" rel="noopener">github.com/Beast-94</a>
+      <a href="https://orcid.org/0009-0004-6774-7376" target="_blank" rel="noopener">ORCID 0009-0004-6774-7376</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section id="about">
+    <div class="section-head">
+      <span class="plot-code mono">PLOT 01</span>
+      <h2>About</h2>
+    </div>
+    <p class="lede">Seven years of applied agricultural research across KALRO, the Alliance of Bioversity International &amp; CIAT, ICIPE, and REAL IPM, spanning quantitative genetics, machine learning, and crop simulation. Recently defended an MSc in Plant Breeding and Molecular Biology at Kenyatta University, with graduation expected December 2026. Current work sits at the intersection of genomic selection, computer-vision phenotyping, and mixed-model analysis of multi-environment trials — building tools that turn field data into breeding decisions.</p>
+  </section>
+
+  <section id="experience">
+    <div class="section-head">
+      <span class="plot-code mono">PLOT 02</span>
+      <h2>Experience</h2>
+    </div>
+    <div class="timeline">
+      <div class="role">
+        <div class="role-head">
+          <span class="role-title">Alliance of Bioversity International &amp; CIAT — Forages Team</span>
+          <span class="role-date mono">Current</span>
+        </div>
+        <p>Working under Dr. Rosa Jauregui and Dr. Sylvia Nyawira on forage genetics, including Urochloa diversity panel evaluation, genotype resilience to pest pressure, and multi-trait selection index work.</p>
+      </div>
+      <div class="role">
+        <div class="role-head">
+          <span class="role-title">KALRO</span>
+        </div>
+        <p>Applied agricultural research, including KCSAP-funded MSc project work on silicon-mediated drought tolerance in sorghum landraces.</p>
+      </div>
+      <div class="role">
+        <div class="role-head">
+          <span class="role-title">ICIPE</span>
+        </div>
+        <p>High-throughput digital image acquisition and computer-vision pipelines (ResNet, GoogLeNet) for quantifying spider mite damage in field trials.</p>
+      </div>
+      <div class="role">
+        <div class="role-head">
+          <span class="role-title">REAL IPM — R&amp;D Coordinator (Intern)</span>
+          <span class="role-date mono">2016 – 2017</span>
+        </div>
+        <p>Biocontrol production and pest resistance screening.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="section-head">
+      <span class="plot-code mono">PLOT 03</span>
+      <h2>Skills</h2>
+    </div>
+
+    <div class="block-group">
+      <span class="block-label mono">QUANTITATIVE GENETICS</span>
+      <div class="chips">
+        <span class="chip"><span class="id mono">QG.01</span>GWAS</span>
+        <span class="chip"><span class="id mono">QG.02</span>Genomic selection (GBS)</span>
+        <span class="chip"><span class="id mono">QG.03</span>AMMI / GGE biplots</span>
+        <span class="chip"><span class="id mono">QG.04</span>BLUP / BLUE estimation</span>
+        <span class="chip"><span class="id mono">QG.05</span>Mixed models in R</span>
+      </div>
+    </div>
+
+    <div class="block-group">
+      <span class="block-label mono">MACHINE LEARNING &amp; COMPUTER VISION</span>
+      <div class="chips">
+        <span class="chip"><span class="id mono">ML.01</span>TensorFlow</span>
+        <span class="chip"><span class="id mono">ML.02</span>OpenCV</span>
+        <span class="chip"><span class="id mono">ML.03</span>ResNet</span>
+        <span class="chip"><span class="id mono">ML.04</span>GoogLeNet</span>
+      </div>
+    </div>
+
+    <div class="block-group">
+      <span class="block-label mono">GEOSPATIAL &amp; SIMULATION</span>
+      <div class="chips">
+        <span class="chip"><span class="id mono">GS.01</span>QGIS</span>
+        <span class="chip"><span class="id mono">GS.02</span>Google Earth Engine</span>
+        <span class="chip"><span class="id mono">GS.03</span>GeoPandas</span>
+        <span class="chip"><span class="id mono">GS.04</span>APSIM</span>
+        <span class="chip"><span class="id mono">GS.05</span>DSSAT</span>
+      </div>
+    </div>
+
+    <div class="block-group">
+      <span class="block-label mono">LANGUAGES &amp; PROGRAMMING</span>
+      <div class="chips">
+        <span class="chip"><span class="id mono">L.01</span>R</span>
+        <span class="chip"><span class="id mono">L.02</span>Python</span>
+        <span class="chip"><span class="id mono">L.03</span>French (intermediate)</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="publications">
+    <div class="section-head">
+      <span class="plot-code mono">PLOT 04</span>
+      <h2>Publications</h2>
+    </div>
+
+    <div class="pub">
+      <span class="pub-tag mono">Published — MDPI Plants, 2026</span>
+      <h3>Agronomic Stability and Yield Response of Urochloa Forages Under Spider Mite Infestation</h3>
+      <p>Field evaluation showing a 22.4% biomass yield reduction under mite infestation across a diversity panel of Urochloa accessions.</p>
+      <a href="https://doi.org/10.3390/plants15071117" target="_blank" rel="noopener">doi.org/10.3390/plants15071117 →</a>
+    </div>
+
+    <div class="pub">
+      <span class="pub-tag inprep mono">In preparation</span>
+      <h3>Genotypic Resilience of Tropical Urochloa Forages to Spider Mite Infestation</h3>
+      <p>55-genotype diversity panel evaluated under infested and uninfested field conditions at ICIPE's ITOC campus (Mbita Point, 2023–2024), with multi-trait selection index (MTSI) rankings and heritability analysis.</p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="section-head">
+      <span class="plot-code mono">PLOT 05</span>
+      <h2>Projects &amp; code</h2>
+    </div>
+    <div class="projects">
+      <div class="card">
+        <h3>Forage genomics &amp; ML pipeline</h3>
+        <p>TensorFlow-based trait prediction alongside R quantitative genetics workflows — mixed models, BLUP/heritability, and genomic prediction in one repository.</p>
+        <span class="stack mono">R · TensorFlow · renv</span>
+        <a class="go" href="https://github.com/Beast-94" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+      <div class="card">
+        <h3>Genotype selection decision-support tool</h3>
+        <p>An R Shiny app built on the forage diversity panel dataset to support multi-trait genotype selection decisions.</p>
+        <span class="stack mono">R · Shiny</span>
+        <a class="go" href="https://github.com/Beast-94" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+      <div class="card">
+        <h3>Brachiaria adoption geospatial dataset</h3>
+        <p>A geospatial dataset and QGIS visualization suite mapping Brachiaria hybrid grass adoption across seven Kenyan sites, compiled from peer-reviewed and gray literature.</p>
+        <span class="stack mono">QGIS · GeoPandas</span>
+        <a class="go" href="https://github.com/Beast-94" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+      <div class="card">
+        <h3>Spider mite damage quantification</h3>
+        <p>High-throughput digital image pipeline for quantifying spider mite damage in field trials using ResNet and GoogLeNet architectures.</p>
+        <span class="stack mono">TensorFlow · OpenCV</span>
+        <a class="go" href="https://github.com/Beast-94" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <div class="section-head">
+    <span class="plot-code mono">PLOT 06</span>
+    <h2>Contact</h2>
+  </div>
+  <p>Open to PhD positions and research roles in quantitative genetics, genomic selection, and applied plant breeding.</p>
+  <div class="contact-grid">
+    <div class="contact-item"><span class="mono">EMAIL</span><a href="mailto:kimaniadrian@gmail.com">kimaniadrian@gmail.com</a></div>
+    <div class="contact-item"><span class="mono">GITHUB</span><a href="https://github.com/Beast-94" target="_blank" rel="noopener">github.com/Beast-94</a></div>
+    <div class="contact-item"><span class="mono">ORCID</span><a href="https://orcid.org/0009-0004-6774-7376" target="_blank" rel="noopener">0009-0004-6774-7376</a></div>
+    <div class="contact-item"><span class="mono">LOCATION</span><span>Nairobi, Kenya</span></div>
+  </div>
+</footer>
+
+<script>
+  // Light up a handful of "plots" in the hero grid on load, like selected accessions in a trial layout.
+  (function(){
+    var field = document.getElementById('plotField');
+    if(!field) return;
+    var total = 84; // 14 x 6
+    for(var i=0;i<total;i++){ field.appendChild(document.createElement('div')); }
+    var cells = field.querySelectorAll('div');
+    var indices = Array.from({length: total}, (_,i)=>i).sort(()=>Math.random()-0.5).slice(0, 14);
+    indices.forEach(function(idx, order){
+      setTimeout(function(){ cells[idx].classList.add('on'); }, order * 90);
+    });
+  })();
+</script>
+
+</body>
+</html>
