@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Adrian Mating'i Kimani — Plant Breeder & Quantitative Geneticist</title>
-<meta name="description" content="Plant breeder and quantitative geneticist working across genomic selection, machine learning, and field trial genetics in East Africa.">
+<title>Adrian Mating'i Kimani — Plant Breeder & Agricultural Geneticist</title>
+<meta name="description" content="Plant breeder, agricultural geneticist, and data scientist working across genomic selection, high-throughput phenotyping, and quantitative genetics in East Africa.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -40,7 +40,7 @@
   /* ---------- HERO ---------- */
   .hero{
     position:relative;
-    padding:96px 0 72px;
+    padding:88px 0 64px;
     overflow:hidden;
     border-bottom:1px solid var(--rule);
   }
@@ -78,32 +78,39 @@
   h1{
     font-family:'Fraunces', serif;
     font-weight:500;
-    font-size:clamp(2.4rem, 6vw, 3.6rem);
+    font-size:clamp(2.2rem, 5.6vw, 3.4rem);
     line-height:1.05;
-    margin:18px 0 16px;
-    max-width:12ch;
+    margin:18px 0 12px;
+    max-width:14ch;
   }
+  .titles{
+    color:var(--gold);
+    font-size:0.95rem;
+    margin-bottom:16px;
+  }
+  .titles .mono{color:var(--gold);}
   .hero-sub{
     color:var(--text-muted);
-    max-width:52ch;
-    font-size:1.05rem;
+    max-width:56ch;
+    font-size:1.02rem;
   }
   .hero-meta{
-    margin-top:32px;
+    margin-top:28px;
     display:flex;
     flex-wrap:wrap;
     gap:10px 22px;
-    font-size:0.85rem;
+    font-size:0.82rem;
     color:var(--text-muted);
   }
   .hero-meta a{color:var(--text-muted); text-decoration:none; border-bottom:1px solid var(--rule);}
   .hero-meta a:hover{color:var(--gold); border-color:var(--gold);}
+  .hero-meta span{color:var(--text-muted);}
 
   /* ---------- SECTIONS ---------- */
-  section{padding:64px 0; border-bottom:1px solid var(--rule);}
+  section{padding:56px 0; border-bottom:1px solid var(--rule);}
   .section-head{
     display:flex; align-items:baseline; gap:14px;
-    margin-bottom:32px;
+    margin-bottom:28px;
   }
   .plot-code{
     color:var(--gold);
@@ -114,29 +121,31 @@
   h2{
     font-family:'Fraunces', serif;
     font-weight:500;
-    font-size:1.5rem;
+    font-size:1.4rem;
   }
   p{color:var(--text-muted); max-width:65ch;}
-  .lede{color:var(--text); font-size:1.05rem; max-width:62ch;}
+  .lede{color:var(--text); font-size:1.02rem; max-width:64ch;}
 
-  /* ---------- EXPERIENCE ---------- */
+  /* ---------- EXPERIENCE / EDUCATION ---------- */
   .timeline{border-left:1px solid var(--rule); margin-left:4px;}
-  .role{padding:0 0 28px 24px; position:relative;}
+  .role{padding:0 0 26px 24px; position:relative;}
   .role:last-child{padding-bottom:0;}
   .role::before{
     content:''; position:absolute; left:-5px; top:6px;
     width:9px; height:9px; border-radius:2px;
     background:var(--gold);
   }
-  .role-head{display:flex; flex-wrap:wrap; gap:8px 14px; align-items:baseline; margin-bottom:6px;}
-  .role-title{font-weight:600; font-size:1.02rem;}
-  .role-date{color:var(--gold); font-size:0.78rem;}
-  .role p{font-size:0.95rem;}
+  .role-head{display:flex; flex-wrap:wrap; gap:6px 14px; align-items:baseline; margin-bottom:4px;}
+  .role-title{font-weight:600; font-size:1rem; color:var(--text);}
+  .role-org{font-size:0.86rem; color:var(--text-muted);}
+  .role-date{color:var(--gold); font-size:0.76rem; margin-left:auto;}
+  .role ul{margin:8px 0 0 18px; padding:0;}
+  .role li{font-size:0.9rem; color:var(--text-muted); margin-bottom:4px;}
 
   /* ---------- SKILLS ---------- */
-  .block-group{margin-bottom:30px;}
+  .block-group{margin-bottom:28px;}
   .block-label{
-    font-size:0.78rem; color:var(--gold); letter-spacing:0.05em; margin-bottom:12px; display:block;
+    font-size:0.76rem; color:var(--gold); letter-spacing:0.05em; margin-bottom:12px; display:block;
   }
   .chips{display:flex; flex-wrap:wrap; gap:8px;}
   .chip{
@@ -144,7 +153,7 @@
     border:1px solid var(--rule);
     border-radius:3px;
     padding:7px 12px;
-    font-size:0.85rem;
+    font-size:0.84rem;
     transition:transform 160ms ease, border-color 160ms ease, background 160ms ease;
   }
   .chip:hover{
@@ -152,7 +161,7 @@
     background:var(--surface-2);
     transform:translateY(-2px);
   }
-  .chip .id{color:var(--gold); font-size:0.7rem; margin-right:6px;}
+  .chip .id{color:var(--gold); font-size:0.68rem; margin-right:6px;}
 
   /* ---------- PUBLICATIONS ---------- */
   .pub{
@@ -164,7 +173,7 @@
   }
   .pub-tag{
     display:inline-block;
-    font-size:0.68rem;
+    font-size:0.66rem;
     letter-spacing:0.05em;
     color:var(--bg);
     background:var(--gold);
@@ -173,10 +182,26 @@
     margin-bottom:10px;
     text-transform:uppercase;
   }
-  .pub-tag.inprep{background:transparent; color:var(--gold); border:1px solid var(--gold);}
-  .pub h3{font-family:'Fraunces', serif; font-weight:500; font-size:1.05rem; margin-bottom:6px; color:var(--text);}
-  .pub p{font-size:0.92rem; margin-bottom:8px;}
-  .pub a{font-size:0.85rem; text-decoration:none; border-bottom:1px solid currentColor;}
+  .pub-tag.pending{background:transparent; color:var(--gold); border:1px solid var(--gold);}
+  .pub h3{font-family:'Fraunces', serif; font-weight:500; font-size:1.02rem; margin-bottom:6px; color:var(--text);}
+  .pub p{font-size:0.9rem; margin-bottom:8px;}
+  .pub a{font-size:0.84rem; text-decoration:none; border-bottom:1px solid currentColor;}
+  .pub .cite{font-size:0.82rem; color:var(--text-muted); margin-bottom:8px; font-style:italic;}
+
+  /* ---------- SIMPLE LISTS (talks, reports, certs, affiliations) ---------- */
+  .simple-list{list-style:none;}
+  .simple-list li{
+    padding:12px 0;
+    border-bottom:1px solid var(--rule);
+    font-size:0.9rem;
+    color:var(--text-muted);
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+  }
+  .simple-list li:last-child{border-bottom:none;}
+  .simple-list .tag{color:var(--gold); font-size:0.76rem; min-width:88px;}
+  .simple-list strong{color:var(--text); font-weight:500;}
 
   /* ---------- PROJECTS ---------- */
   .projects{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
@@ -197,13 +222,13 @@
   .card a.go:hover{color:var(--gold);}
 
   /* ---------- CONTACT / FOOTER ---------- */
-  footer{padding:56px 0 64px;}
-  .contact-grid{display:flex; flex-wrap:wrap; gap:28px; margin-top:26px;}
-  .contact-item{font-size:0.92rem;}
-  .contact-item span{display:block; color:var(--gold); font-size:0.72rem; letter-spacing:0.05em; margin-bottom:4px;}
+  footer{padding:52px 0 60px;}
+  .contact-grid{display:flex; flex-wrap:wrap; gap:26px; margin-top:24px;}
+  .contact-item{font-size:0.9rem;}
+  .contact-item span{display:block; color:var(--gold); font-size:0.7rem; letter-spacing:0.05em; margin-bottom:4px;}
   .contact-item a{color:var(--text); text-decoration:none; border-bottom:1px solid var(--rule);}
   .contact-item a:hover{color:var(--gold); border-color:var(--gold);}
-  .aside{margin-top:40px; padding-top:24px; border-top:1px solid var(--rule); font-size:0.85rem; color:var(--text-muted);}
+  .aside{margin-top:36px; padding-top:22px; border-top:1px solid var(--rule); font-size:0.84rem; color:var(--text-muted);}
 </style>
 </head>
 <body>
@@ -213,9 +238,11 @@
   <div class="wrap hero-inner">
     <p class="eyebrow mono">Nairobi, Kenya</p>
     <h1>Adrian Mating'i Kimani</h1>
-    <p class="hero-sub">Plant breeder and quantitative geneticist working across genomic selection, machine learning, and field trial genetics — currently on the Forages team at the Alliance of Bioversity International &amp; CIAT.</p>
+    <p class="titles mono">Plant Breeder · Agricultural Geneticist · Crop Improvement Researcher · Data Scientist</p>
+    <p class="hero-sub">Plant breeder and agricultural geneticist with 7+ years advancing crop improvement through genomic selection, high-throughput phenotyping, and quantitative genetics — delivering field-validated breeding outcomes across CGIAR and national agricultural research programs in East Africa.</p>
     <div class="hero-meta mono">
       <a href="mailto:kimaniadrian@gmail.com">kimaniadrian@gmail.com</a>
+      <span>+254 702 016 442</span>
       <a href="https://github.com/Beast-94" target="_blank" rel="noopener">github.com/Beast-94</a>
       <a href="https://orcid.org/0009-0004-6774-7376" target="_blank" rel="noopener">ORCID 0009-0004-6774-7376</a>
     </div>
@@ -227,75 +254,119 @@
   <section id="about">
     <div class="section-head">
       <span class="plot-code mono">PLOT 01</span>
-      <h2>About</h2>
+      <h2>Research interests &amp; summary</h2>
     </div>
-    <p class="lede">Seven years of applied agricultural research across KALRO, the Alliance of Bioversity International &amp; CIAT, ICIPE, and REAL IPM, spanning quantitative genetics, machine learning, and crop simulation. Recently defended an MSc in Plant Breeding and Molecular Biology at Kenyatta University, with graduation expected December 2026. Current work sits at the intersection of genomic selection, computer-vision phenotyping, and mixed-model analysis of multi-environment trials — building tools that turn field data into breeding decisions.</p>
+    <p class="lede">Genomic selection and quantitative genetics for abiotic and biotic stress resilience; high-throughput phenotyping and AI-assisted breeding pipelines; molecular and genomic-assisted biofortification; climate-resilient forage and cereal crop improvement in the Global South.</p>
+    <p style="margin-top:14px;">Skilled in GWAS, QTL mapping, GBS, gene sequencing analysis, and AI-driven phenotyping pipelines (Python, R, TensorFlow), with a proven record of delivering field-validated breeding outcomes across CGIAR and national agricultural research programs in East Africa.</p>
+  </section>
+
+  <section id="education">
+    <div class="section-head">
+      <span class="plot-code mono">PLOT 02</span>
+      <h2>Education</h2>
+    </div>
+    <div class="timeline">
+      <div class="role">
+        <div class="role-head">
+          <span class="role-title">M.Sc. Plant Breeding &amp; Molecular Biology</span>
+          <span class="role-date mono">2018 – 2026</span>
+        </div>
+        <div class="role-org">Kenyatta University · GPA 72.70/100</div>
+        <p>Genomic-assisted breeding, molecular diagnostics, quantitative genetics.</p>
+      </div>
+      <div class="role">
+        <div class="role-head">
+          <span class="role-title">B.Sc. Crop Improvement &amp; Protection</span>
+          <span class="role-date mono">2013 – 2018</span>
+        </div>
+        <div class="role-org">Kenyatta University · GPA 64.29/100</div>
+        <p>Crop pathology, entomology, agronomy, plant genetics.</p>
+      </div>
+    </div>
   </section>
 
   <section id="experience">
     <div class="section-head">
-      <span class="plot-code mono">PLOT 02</span>
+      <span class="plot-code mono">PLOT 03</span>
       <h2>Experience</h2>
     </div>
     <div class="timeline">
       <div class="role">
         <div class="role-head">
-          <span class="role-title">Alliance of Bioversity International &amp; CIAT — Forages Team</span>
-          <span class="role-date mono">Current</span>
+          <span class="role-title">Graduate Researcher</span>
+          <span class="role-date mono">2023 – 2026</span>
         </div>
-        <p>Working under Dr. Rosa Jauregui and Dr. Sylvia Nyawira on forage genetics, including Urochloa diversity panel evaluation, genotype resilience to pest pressure, and multi-trait selection index work.</p>
+        <div class="role-org">Alliance of Bioversity International &amp; CIAT / International Center of Insect Physiology and Ecology (ICIPE), Kenya</div>
+        <ul>
+          <li>Conducted high-throughput image acquisition and phenotyping on a panel of 55 Urochloa spp. genotypes for red spider mite resistance screening; assisted in building the image analysis pipeline using ResNet and GoogLeNet deep learning models to quantify pest damage.</li>
+          <li>Collected, analyzed, and published breeding-relevant morphological data, NDVI, and nutritional/forage quality traits across the genotype panel; estimated breeding values via BLUPs to rank genotypes for damage tolerance and MTSI.</li>
+        </ul>
       </div>
       <div class="role">
         <div class="role-head">
-          <span class="role-title">KALRO</span>
+          <span class="role-title">Breeding Researcher</span>
+          <span class="role-date mono">2019 – 2023</span>
         </div>
-        <p>Applied agricultural research, including KCSAP-funded MSc project work on silicon-mediated drought tolerance in sorghum landraces.</p>
+        <div class="role-org">Kenya Climate-Smart Agriculture Project (KCSAP), Ministry of Agriculture and Livestock Development – State Department for Crop Development and Agricultural Research, Kenya</div>
+        <ul>
+          <li>Secured a USD 7,200 research grant to design and execute an MSc thesis project on silicon-moderated drought tolerance in sorghum landraces, from experimental design through data collection and analysis.</li>
+          <li>Screened sorghum landraces for abiotic and biotic stress resilience; developed biofortification strategies via genomic-assisted selection targeting AQP gene expression under silicon amendment.</li>
+          <li>Designed multi-location trials optimizing GxE interactions for yield stability; led farmer participatory trials and technology transfer in Kitui County.</li>
+        </ul>
       </div>
       <div class="role">
         <div class="role-head">
-          <span class="role-title">ICIPE</span>
-        </div>
-        <p>High-throughput digital image acquisition and computer-vision pipelines (ResNet, GoogLeNet) for quantifying spider mite damage in field trials.</p>
-      </div>
-      <div class="role">
-        <div class="role-head">
-          <span class="role-title">REAL IPM — R&amp;D Coordinator (Intern)</span>
+          <span class="role-title">R&amp;D Coordinator (Intern)</span>
           <span class="role-date mono">2016 – 2017</span>
         </div>
-        <p>Biocontrol production and pest resistance screening.</p>
+        <div class="role-org">REAL IPM, Kenya</div>
+        <ul>
+          <li>Evaluated microbial biopesticides (Trichoderma, Metarhizium, Bacillus spp.) for integrated pest management under GLP protocols, achieving a 30% reduction in whitefly infestation in cucumber trials.</li>
+        </ul>
       </div>
     </div>
   </section>
 
   <section id="skills">
     <div class="section-head">
-      <span class="plot-code mono">PLOT 03</span>
-      <h2>Skills</h2>
+      <span class="plot-code mono">PLOT 04</span>
+      <h2>Core competencies</h2>
     </div>
 
     <div class="block-group">
-      <span class="block-label mono">QUANTITATIVE GENETICS</span>
+      <span class="block-label mono">GENOMIC SELECTION &amp; BIOINFORMATICS</span>
       <div class="chips">
-        <span class="chip"><span class="id mono">QG.01</span>GWAS</span>
-        <span class="chip"><span class="id mono">QG.02</span>Genomic selection (GBS)</span>
-        <span class="chip"><span class="id mono">QG.03</span>AMMI / GGE biplots</span>
-        <span class="chip"><span class="id mono">QG.04</span>BLUP / BLUE estimation</span>
-        <span class="chip"><span class="id mono">QG.05</span>Mixed models in R</span>
+        <span class="chip"><span class="id mono">GB.01</span>SNP genotyping</span>
+        <span class="chip"><span class="id mono">GB.02</span>GWAS</span>
+        <span class="chip"><span class="id mono">GB.03</span>QTL mapping</span>
+        <span class="chip"><span class="id mono">GB.04</span>GBS</span>
       </div>
     </div>
 
     <div class="block-group">
-      <span class="block-label mono">MACHINE LEARNING &amp; COMPUTER VISION</span>
+      <span class="block-label mono">QUANTITATIVE GENETICS &amp; BIOSTATISTICS</span>
+      <div class="chips">
+        <span class="chip"><span class="id mono">QG.01</span>BLUPs / BLUEs</span>
+        <span class="chip"><span class="id mono">QG.02</span>Bayesian inference</span>
+        <span class="chip"><span class="id mono">QG.03</span>Mixed models (R — Mr.Bean, Bioconductor)</span>
+        <span class="chip"><span class="id mono">QG.04</span>SAS JMP Pro</span>
+        <span class="chip"><span class="id mono">QG.05</span>Python</span>
+      </div>
+    </div>
+
+    <div class="block-group">
+      <span class="block-label mono">HIGH-THROUGHPUT PHENOTYPING &amp; MACHINE LEARNING</span>
       <div class="chips">
         <span class="chip"><span class="id mono">ML.01</span>TensorFlow</span>
         <span class="chip"><span class="id mono">ML.02</span>OpenCV</span>
-        <span class="chip"><span class="id mono">ML.03</span>ResNet</span>
-        <span class="chip"><span class="id mono">ML.04</span>GoogLeNet</span>
+        <span class="chip"><span class="id mono">ML.03</span>Deep learning (CNNs)</span>
+        <span class="chip"><span class="id mono">ML.04</span>Digital imaging</span>
+        <span class="chip"><span class="id mono">ML.05</span>Automated pest/disease quantification</span>
       </div>
     </div>
 
     <div class="block-group">
-      <span class="block-label mono">GEOSPATIAL &amp; SIMULATION</span>
+      <span class="block-label mono">GEOSPATIAL ANALYSIS &amp; CROP MODELING</span>
       <div class="chips">
         <span class="chip"><span class="id mono">GS.01</span>QGIS</span>
         <span class="chip"><span class="id mono">GS.02</span>Google Earth Engine</span>
@@ -306,38 +377,89 @@
     </div>
 
     <div class="block-group">
-      <span class="block-label mono">LANGUAGES &amp; PROGRAMMING</span>
+      <span class="block-label mono">FIELD TRIAL DESIGN &amp; TECHNOLOGY TRANSFER</span>
       <div class="chips">
-        <span class="chip"><span class="id mono">L.01</span>R</span>
-        <span class="chip"><span class="id mono">L.02</span>Python</span>
-        <span class="chip"><span class="id mono">L.03</span>French (intermediate)</span>
+        <span class="chip"><span class="id mono">FT.01</span>Multi-location GxE trials</span>
+        <span class="chip"><span class="id mono">FT.02</span>Participatory breeding</span>
+        <span class="chip"><span class="id mono">FT.03</span>Farmer extension</span>
       </div>
     </div>
   </section>
 
   <section id="publications">
     <div class="section-head">
-      <span class="plot-code mono">PLOT 04</span>
-      <h2>Publications</h2>
+      <span class="plot-code mono">PLOT 05</span>
+      <h2>Publications &amp; research</h2>
     </div>
 
-    <div class="pub">
-      <span class="pub-tag mono">Published — MDPI Plants, 2026</span>
-      <h3>Agronomic Stability and Yield Response of Urochloa Forages Under Spider Mite Infestation</h3>
-      <p>Field evaluation showing a 22.4% biomass yield reduction under mite infestation across a diversity panel of Urochloa accessions.</p>
+    <span class="block-label mono">PEER-REVIEWED JOURNAL ARTICLES</span>
+
+    <div class="pub" style="margin-top:12px;">
+      <span class="pub-tag mono">Published — Plants, 2026</span>
+      <h3>Spider Mite Response, Agronomic Performance, and Stability of a Urochloa spp. Diversity Panel Under Field Conditions</h3>
+      <p class="cite">Kimani, A.M., Muruu, D.K., Espitia-Buitrago, P., Henga, S., Muui, C., Chidawanyika, F., &amp; Jauregui, R.N. (2026). Plants, 15(7), 1117.</p>
       <a href="https://doi.org/10.3390/plants15071117" target="_blank" rel="noopener">doi.org/10.3390/plants15071117 →</a>
     </div>
 
     <div class="pub">
-      <span class="pub-tag inprep mono">In preparation</span>
-      <h3>Genotypic Resilience of Tropical Urochloa Forages to Spider Mite Infestation</h3>
-      <p>55-genotype diversity panel evaluated under infested and uninfested field conditions at ICIPE's ITOC campus (Mbita Point, 2023–2024), with multi-trait selection index (MTSI) rankings and heritability analysis.</p>
+      <span class="pub-tag mono">Published — East African Agricultural and Forestry Journal, 2023</span>
+      <h3>Drench Effect of Orthosilicic Acid on Drought Stress Tolerance on Morphological and Phenotypic Traits of Sorghum (Sorghum bicolor (L.) Moench) Landraces</h3>
+      <p class="cite">Kimani, A.M., Henga, S.A., Kimani, W., &amp; Muui, C. (2023). East African Agricultural and Forestry Journal, 87(4), 189–203.</p>
+      <a href="https://www.kalro.org/eaafj/index.php/path/article/view/670/749" target="_blank" rel="noopener">kalro.org/eaafj →</a>
     </div>
+
+    <div class="pub">
+      <span class="pub-tag pending mono">Manuscript submitted</span>
+      <h3>Multi-Trait Stability Selection for Nutritive Quality and Spider Mite Resilience in Tropical Urochloa spp.</h3>
+      <p class="cite">Kimani, A.M., et al. (2026).</p>
+    </div>
+
+    <span class="block-label mono" style="margin-top:26px; display:block;">CONFERENCE PRESENTATIONS</span>
+    <ul class="simple-list">
+      <li><span class="tag mono">2023</span><span><strong>African Plant Breeders Association Conference</strong>, Mohammed VI Polytechnic University, Benguerir, Morocco — Oral: "Challenges Facing Forage Seed Markets in East Africa"; Poster: "Machine Learning-Based Pest Quantification Methods in Brachiaria spp."</span></li>
+      <li><span class="tag mono">2025</span><span><strong>African Plant Science Symposium Series (APSS)</strong>, virtual — "Smart Field Phenotyping Identifies Spider-Mite Resistant Brachiaria Genotypes for Climate-Smart Agriculture"</span></li>
+    </ul>
+
+    <span class="block-label mono" style="margin-top:26px; display:block;">TECHNICAL REPORTS</span>
+    <ul class="simple-list">
+      <li><span class="tag mono">2017</span><span>Youth Expectations of Kenyan Politics. Bildung fördert Entwicklung.</span></li>
+      <li><span class="tag mono">2018</span><span>Income-Generating Activities and Entrepreneurship for Youth and Women Empowerment: A Case Study in Nairobi. Bildung fördert Entwicklung.</span></li>
+    </ul>
+  </section>
+
+  <section id="certifications">
+    <div class="section-head">
+      <span class="plot-code mono">PLOT 06</span>
+      <h2>Certifications &amp; training</h2>
+    </div>
+    <ul class="simple-list">
+      <li><span>Advanced Machine Learning (TensorFlow, CNNs, Deep Learning) — <strong>freeCodeCamp</strong></span></li>
+      <li><span>Agricultural Data Science (SAS JMP Pro, R, Power BI) — <strong>Simplilearn</strong></span></li>
+      <li><span>Geospatial Data Analysis with GeoPandas — <strong>Spatial Lab</strong></span></li>
+      <li><span>Biosafety in Plant Biotechnology — <strong>VIB, VLIR-UOS, Ghent University</strong></span></li>
+      <li><span>CRISPR Gene Editing in Crops — <strong>Agricultural Biotechnology Institute (ABI)</strong></span></li>
+      <li><span>Proposal and Grant Writing — <strong>EKIPA and KCSAP</strong></span></li>
+      <li><span>Project Management Essentials — <strong>Management and Strategy Institute (MSI)</strong></span></li>
+      <li><span>Operations and Performance Management — <strong>Young African Leaders Initiative (YALI)</strong></span></li>
+      <li><span>Fundamentals of Digital Marketing — <strong>Google</strong></span></li>
+    </ul>
+  </section>
+
+  <section id="affiliations">
+    <div class="section-head">
+      <span class="plot-code mono">PLOT 07</span>
+      <h2>Professional affiliations</h2>
+    </div>
+    <ul class="simple-list">
+      <li><span>Member, <strong>African Plant Breeders Association (APBA)</strong></span></li>
+      <li><span>Affiliate, <strong>CGIAR Excellence in Breeding Platform (EiB)</strong></span></li>
+      <li><span>Member, <strong>American Society for Cell Biology (ASCB)</strong></span></li>
+    </ul>
   </section>
 
   <section id="projects">
     <div class="section-head">
-      <span class="plot-code mono">PLOT 05</span>
+      <span class="plot-code mono">PLOT 08</span>
       <h2>Projects &amp; code</h2>
     </div>
     <div class="projects">
@@ -372,16 +494,18 @@
 
 <footer class="wrap">
   <div class="section-head">
-    <span class="plot-code mono">PLOT 06</span>
+    <span class="plot-code mono">PLOT 09</span>
     <h2>Contact</h2>
   </div>
   <p>Open to PhD positions and research roles in quantitative genetics, genomic selection, and applied plant breeding.</p>
   <div class="contact-grid">
     <div class="contact-item"><span class="mono">EMAIL</span><a href="mailto:kimaniadrian@gmail.com">kimaniadrian@gmail.com</a></div>
+    <div class="contact-item"><span class="mono">PHONE</span><span>+254 702 016 442</span></div>
     <div class="contact-item"><span class="mono">GITHUB</span><a href="https://github.com/Beast-94" target="_blank" rel="noopener">github.com/Beast-94</a></div>
     <div class="contact-item"><span class="mono">ORCID</span><a href="https://orcid.org/0009-0004-6774-7376" target="_blank" rel="noopener">0009-0004-6774-7376</a></div>
     <div class="contact-item"><span class="mono">LOCATION</span><span>Nairobi, Kenya</span></div>
   </div>
+  <p class="aside">References available on request.</p>
 </footer>
 
 <script>
