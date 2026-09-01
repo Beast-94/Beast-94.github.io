@@ -97,7 +97,7 @@ git push -u origin main
 
 ## Citation
 
-If you use this repository, please cite: Kimani et al.,2026
+If you use this repository, please cite: Kimani et al., 2026
 
 ## License
 
