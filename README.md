@@ -101,4 +101,4 @@ If you use this repository, please cite: Kimani et al., 2026
 
 ## License
 
-[MIT / CC-BY-4.0 / choose one]
+[MIT / CC-BY-4.0 /]
