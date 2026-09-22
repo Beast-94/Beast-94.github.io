@@ -71,21 +71,21 @@ python python/scripts/train.py --target trait --epochs 50
 
 ## Data
 
-Raw data is not tracked in git (see `.gitignore`). Describe data provenance and access instructions here, or link to a data availability statement.
+Raw data is not tracked in git (see `.gitignore`). 
 
 ## Portfolio / CV site (free link)
 
 `docs/index.html` is a self-contained CV and project page, ready for **GitHub Pages**.
 
 Published as `https://beast-94.github.io`:
-1. Repository to `Beast-94.github.io` ( match username exactly).
-2. Push it to GitHub (see below).
+1. Repository to `Beast-94.github.io` 
+2. Push to GitHub
 3. In the repo, **Settings → Pages**, set **Source** to `Deploy from a branch`, branch `main`, folder `/docs`. Save.
-4. Site live at `https://beast-94.github.io` within a minute or two (GitHub emails you when it's ready).
+4. Site live at `https://beast-94.github.io`
 
-Pages will then serve at `https://beast-94.github.io/<repo-name>/` instead of the root domain.
+Page- `https://beast-94.github.io/<repo-name>/` 
 
-CV content later, just edit `docs/index.html` directly.
+CV content MODS `docs/index.html` 
 
 ## Push to GitHub
 
